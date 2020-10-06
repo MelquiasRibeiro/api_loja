@@ -16,11 +16,11 @@ public class Estado implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer id;
-	public String name;
+	private Integer id;
+	private String name;
 	
 	@OneToMany(mappedBy = "estado")
-	public List<Cidade> cidades = new ArrayList<>() ;
+	private List<Cidade> cidades = new ArrayList<>() ;
 
 	
 	public Estado(Integer id, String name) {

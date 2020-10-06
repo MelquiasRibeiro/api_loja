@@ -15,12 +15,12 @@ public class Cidade implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer id;
-	public String name;
+	private Integer id;
+	private String name;
 	
 	@ManyToOne
 	@JoinColumn(name = "estado_id")
-	public Estado estado;
+	private Estado estado;
 	
 	
 	public Cidade(Integer id, String name, Estado estado) {
