@@ -75,12 +75,12 @@ public class LojaapiApplication implements CommandLineRunner {
 		Produto p2 = new Produto(null,"impressora",1000.00);		
 		Produto p3 = new Produto(null,"mouse",80.00);
 		
-		cat1.getProdutos().addAll(Arrays.asList(p1, p2,p3));
+		cat1.getProdutos().addAll(Arrays.asList(p1,p2,p3));
 		cat2.getProdutos().addAll(Arrays.asList(p2));
 
 		p1.getCategorias().addAll(Arrays.asList(cat1));
 		p2.getCategorias().addAll(Arrays.asList(cat1,cat2));
-		p2.getCategorias().addAll(Arrays.asList(cat1));
+		p3.getCategorias().addAll(Arrays.asList(cat1));
 
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2)); 
 		
