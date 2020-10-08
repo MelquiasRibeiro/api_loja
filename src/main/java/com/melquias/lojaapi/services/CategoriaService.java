@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.melquias.lojaapi.domain.Categoria;
+import com.melquias.lojaapi.dto.CategoriaDTO;
 import com.melquias.lojaapi.repositories.CategoriaRepository;
 import com.melquias.lojaapi.services.exceptions.DataIntegrityException;
 import com.melquias.lojaapi.services.exceptions.ObjectNotFoundException;
@@ -57,4 +58,7 @@ public class CategoriaService {
 		return repo.findAll(pageRequest);	
 	}
 	
+	public Categoria fromDTO(CategoriaDTO objDTO) {
+		return new Categoria(objDTO.getId(),objDTO.getName());
+	}
 }
